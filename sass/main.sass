@@ -1,0 +1,106 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	background-color: $bg-body
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+/* Базовые настройки*/
+.h1, .h2, .h3, .h4, .h5, .h6
+	text-transform: uppercase
+	line-height: 1.45
+	font-weight: bold 
+	text-align: center
+.hr	
+	width: 30px
+	border-bottom: 7px solid $grn
+	margin: 0 auto
+.header
+	position: relative
+	padding: 20px
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center
+	z-index: 3
+	&-topwaves
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		z-index: -1
+		background-repeat: no-repeat
+		background-size: cover
+		background-position: center
+
+	&-overlay
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		background-color: rgba(#333, .7)
+		z-index: -1
+	&-logo
+		max-width: 50vw
+	&-content
+		.h1
+			font-size: 1.9rem
+			margin-top: 60px
+			margin-bottom: 20px
+		p
+			font-weight: 200
+			text-align: center
+	&-hr
+		margin: 25px auto 35px 
+	&-icons
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+		&_item
+			width: 50%
+			font-size: 14px
+			font-weight: 200
+			img
+				width: 60px
+				margin: 0 auto 15px
+			figcaption
+				text-align: center
+				span
+					font-weight: 600
+					text-transform: uppercase
+
+
+
+@import "media" // Always at the end
