@@ -24,64 +24,213 @@ body
 			border-color: red
 		&:required:valid
 			border-color: green
-
 .img-responsive
 	display: block
 	max-width: 100%
 	height: auto
 	&.img-width
 		width: 100%
+.s-bold
+	font-weight: 600
 
 .text-center
 	text-align: center
-
 b, strong
 	font-weight: bold
+a
+	text-decoration: none
+	&:active
+		text-decoration: none
+	&:visited
+		text-decoration: none
+	&:focus
+		text-decoration: none
 /* Базовые настройки*/
 .h1, .h2, .h3, .h4, .h5, .h6
 	text-transform: uppercase
 	line-height: 1.45
 	font-weight: bold 
 	text-align: center
+section
+	padding: 35% 20px 10% 20px
+.s-main, .s-riven, .s-think, .s-menu, .header
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center
+	position: relative
+	z-index: 1
+.button
+	display: inline-block
+	border: none
+	color: #fff
+	text-decoration: none
+	background-color: $grn
+	padding: 8px 28px
+	font-size: 14px
+	text-transform: uppercase
+	font-weight: 600
+	border-radius: 38px
+	text-align: center
+	white-space: nowrap
+	position: relative
+	outline: none
+	transition: background-color .2s ease
+	cursor: pointer
+	box-shadow: 0px 2px 4.85px 0.15px rgba(0, 0, 1, 0.1)
+	&:focus, &:hover
+		text-decoration: none
+		color: #fff
+	&:hover
+		background-color: lighten($grn, 5%)
+.reason
+	display: block
+	font-size: 18px
+	text-transform: uppercase
+	font-weight: bold
+	text-align: center
+	color: $grn
 .hr	
 	width: 30px
 	border-bottom: 7px solid $grn
 	margin: 0 auto
+.section-overlay
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	background-color: rgba(#333, .7)
+	z-index: -3
+.waves-section
+	width: 100%
+	max-height: 35%
+	position: absolute
+	bottom: -120px
+	left: 0	
+	overflow-x: hidden
+	z-index: -1
+	&_img
+		background-size: cover
+		background-repeat: no-repeat
+		background-position: center
+.circle
+	position: absolute
+	overflow: hidden
+	width: 45vmax
+	height: 45vmax
+	bottom: -10vmax
+	right: 0
+	z-index: -1
+	&::before
+		content: ''
+		position: absolute
+		right: -30vmax	
+		bottom: 0
+		width: 100%
+		height: 100%
+		border-radius: 50%
+		background: linear-gradient( 144deg, rgb(70,19,147) 0%, rgb(50,118,176) 49%, rgb(194,223,246) 100%)
+		opacity: .7
+		/* MENU POPUP */
+.menu	
+	&-overlay
+		position: fixed
+		top: 0
+		left: 0
+		width: 100%
+		height: 100vh
+		opacity: .9
+		background-color: $menu
+		transition: .3s ease
+		transform: translateY(-100%)
+	&-close
+		width: 50px
+		height: 50px
+		position: absolute
+		top: 12%
+		right: 10%
+		&::before, &::after
+			content: ''
+			display: inline-block
+			position: absolute
+			width: 100%
+			height: 3px
+			bottom: 45%
+			background-color: rgba(#fff, .8)	
+		&::before
+			transform: rotate(-45deg)
+		&::after
+			transform: rotate(45deg)
+	&-nav
+		position: relative
+		top: 50%
+		transform: translateY(-50%)
+		width: 100%
+	&-list
+		list-style: none
+		padding: 0
+		margin: 0
+		width: 100%
+	&_item
+		width: 100%
+		height: 100%
+		text-align: center
+		margin-bottom: 30px
+		&__link
+			text-transform: uppercase
+			margin-bottom: 5px
+			text-decoration: none
+			display: inline-block
+			text-align: center
+			font-size: 1.6rem
+			line-height: 1.3
+			color: $text
+			&:hover
+				text-decoration: underline solid $grn
+				color: $text
+	/* HEADER */
 .header
 	position: relative
-	padding: 20px
-	background-repeat: no-repeat
-	background-size: cover
-	background-position: center
+	padding: 20px 20px 20% 20px
 	z-index: 3
+	/* MENU BUTTON */
+	&-menu
+		position: absolute
+		display: block
+		top: 20px
+		right: 20px
+		text-align: center
+		z-index: 5
+		&:hover
+			cursor: pointer
+		&_text
+			font-size: .9rem
+		&_line
+			width: 100%
+			border-bottom: 5px solid $grn
+			margin-bottom: 5px		
 	&-topwaves
 		position: absolute
 		top: 0
 		left: 0
 		width: 100%
 		z-index: -1
-		background-repeat: no-repeat
-		background-size: cover
-		background-position: center
-
-	&-overlay
-		position: absolute
-		top: 0
-		left: 0
-		right: 0
-		bottom: 0
-		background-color: rgba(#333, .7)
-		z-index: -1
+		overflow: hidden
+		img
+			width: 120%
+			background-repeat: no-repeat
+			background-size: cover
+			background-position: center
 	&-logo
 		max-width: 50vw
-	&-content
-		.h1
-			font-size: 1.9rem
-			margin-top: 60px
-			margin-bottom: 20px
-		p
-			font-weight: 200
-			text-align: center
+.main
+	padding-top: 60px
+	.h1
+		font-size: 1.9rem
+		margin-bottom: 20px
+	p
+		font-weight: 200
+		text-align: center
 	&-hr
 		margin: 25px auto 35px 
 	&-icons
@@ -101,7 +250,428 @@ b, strong
 				span
 					font-weight: 600
 					text-transform: uppercase
+	/* HEADER END */
+	/* RIVEN */
+.riven
+	@extend .main 
+	.h2
+		font-size: 1.9rem
+	&-hr
+		@extend .main-hr
+	&-icons
+		@extend .main-icons
+		&_item
+			@extend .main-icons_item
+	/* RIVEN END */
+	/* THINK */
+.think
+	@extend .main 
+	.h2
+		font-size: 1.9rem
+	&-hr
+		@extend .main-hr
+	&-icons
+		@extend .main-icons
+		&_item
+			@extend .main-icons_item
+/* THINK END */
+/* DETAIL */
+.detail
+	background-color: $menu
+	.h4
+		font-weight: 500
+		margin-bottom: 20px
+		color: #fff
+	&-main
+		.h4
+			font-size: 18px
+			font-weight: 200
+			line-height: 1.3
+			margin-bottom: 20px
+	&-boximg
+		width: 100%
+		height: auto
+		img
+			display: block
+			margin: 0 auto
+			margin-bottom: 20px
+/* DETAIL FORM */
+.s-detail
+	background-color: $form
+.form-detail
+	font-family: $opensans
+	max-width: 400px
+	margin: 0 auto
+	&__input
+		outline: none
+		border: 1px solid #ebebeb
+		border-radius: 3px
+		padding: 9px 0 9px 15px
+		width: 100%
+		color: #979797
+		margin-bottom: 20px
+		box-shadow: 0px 2px 4.85px 0.15px rgba(0, 0, 1, 0.1)
+	p
+		margin-top: 10px
+		font-size: 10px
+	a
+		text-decoration: none
+		border-bottom: 1px dashed #fff
+		color: #fff
+		cursor: pointer
+	&__checkbox
+		margin-right: 5px
+		vertical-align: middle
+	&__button
+		font-weight: 500
+		font-size: 18px
+		width: 100%
+		padding: 8px
+		margin-top: 20px
+		margin-bottom: 30px
+	/* DETAIL END */
+	/* S-MENU */
+.s-menu
+	position: relative
+	padding-top: 50px
+	&::after
+		content: ''
+		display: block
+		position: absolute
+		width: 100%
+		min-height: 60vmax
+		left: 0
+		bottom: -35vmax
+		z-index: -1
+		background: url(../img/s-menu/menu-waves.png) center no-repeat
+		background-size: 100%
+	&-wrap
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+	&-box
+		text-align: center
+		width: 50%
+		padding-bottom: 20px
+		img
+			display: inline-block
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			width: 60%
+			height: auto
+		p
+			font-family: $opensans
+			font-weight: 600
+			text-transform: uppercase
+		.fa
+			font-size: 44px
+			text-align: center
+			line-height: 80px
+			color: #fff
+	&-link
+		display: inline-block
+		position: relative
+		width: 80px
+		height: 80px
+		border-radius: 50%
+		background-color: $link
+		cursor: pointer
+		transition: .25s ease
+		&:hover
+			background-color: $grn
+	/* S-MENU END */
+	/* FOOTER */
+.footer
+	z-index: 1
+	position: relative
+	background-color: $footer
+	text-align: center
+	padding: 40px 5px
+	font-family: $opensans
+	&-right-link
+		width: 100%
+		color: #fff
+		border-bottom: 1px dashed #fff
+		text-decoration: none
+		text-transform: uppercase
+		white-space: nowrap
+		&:hover
+			color: rgba(#fff, .55)
+			border-bottom: 1px dashed rgba(#fff, .55)
+	&-phone
+		font-family: $default-font
+		font-size: 20px
+		span
+			font-size: 22px
+	&-direction
+		font-size: 14px
+		font-weight: 300
+	.fa
+		color: rgba(#fff, .55)
+		margin-right: 10px
+	&-social
+		margin-top: 30px
+		width: 100%
+		height: auto
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+		&__link
+			display: block
+			width: 55px
+			height: 55px
+			border-radius: 50%
+			text-align: center
+			margin: 0 5px
+		.fa
+			color: #fff
+			font-size: 25px
+			line-height: 55px
+			margin: 0
+		a:nth-child(1)
+			background-color: #6089bf
+		a:nth-child(2)
+			background-color: #c0318d
+		a:nth-child(3)
+			background-color: #3b5998
+		a:nth-child(4)
+			background-color: #cd191e
+	/* FOOTER END*/
+	/* COPYRIGHT */
+.copyright
+	font-family: $opensans
+	font-size: 12px
+	color: rgba(#fff, .45)
+	height: 100%
+	background-color: $copyright
+	padding: 35px
+	&-text
+		text-transform: uppercase
+	&-link
+		text-transform: none
+		border-bottom: 1px solid rgba(#fff, .45)
+		color: rgba(#fff, .45)
+	&-sells
+		text-align: center
+	ul
+		list-style-type: none
+		display: inline-block
+		width: 180px
+		height: 45px
+		margin: 0
+		padding: 0
+		li
+			position: relative
+			width: 100%
+			height: 100%
+			span
+				display: block
+				text-align: right
+				line-height: 1.4
+				position: absolute
+				top: 0
+				right: 45px	
+			&::after
+				content: ''
+				display: block
+				position: absolute
+				width: 35px
+				height: 35px
+				background: url(../img/sells.png) center no-repeat
+				background-size: 100%
+				top: 0
+				right: 0
+	/* COPYRIGHT END */
+
+/* ABOUT(MORE) PAGE */		
+.about-overlay
+	background-color: rgba(#333, .85)
+.main-about, .think-about, .riven-about
+	&-video
+		width: 100%
+		margin-top: 40px
+		padding: 35px 0
+		position: relative
+		&::after
+			content: ''
+			position: absolute
+			top: 0
+			width: 100%
+			height: 1px
+			border-top: 1px dashed rgba(#fff, .3)
+		&_imgbox
+			width: 140px
+			margin: 0 auto
+			img
+				display: block
+				width: 70px
+				height: auto
+				margin: 0 auto
+			a
+				display: inline-block
+				text-transform: uppercase
+				color: #fff
+				text-decoration: underline
+				text-align: center
+				font-size: 18px
+				margin-top: 20px
+	.h1
+		margin-top: 30px
+		text-transform: none
+	/* ABOUT PAGE */
+.about-header
+	background-color: #564398
+	padding-bottom: 0
+.s-about-bottom, .s-about-middle
+	padding: 0
+	background-color: #564398
+
+.h-about
+	p
+	font-size: 24px
+	img
+		width: 100%
+		height: auto
+		margin-top: 20px
+	&-reason
+		text-align: left
+		display: inline-block
+		margin-right: 5px
+		font-size: 24px
+	&-content
+		background-image: linear-gradient( 144deg, rgb(70,19,147) 0%, rgb(50,118,176) 49%, rgb(194,223,246) 100%)
+		padding: 60px 20px
+		text-align: center
+		.h2 
+			margin-top: 20px
+			font-size: 24px
+			text-transform: none
+		p 
+			font-size: 16px
+			margin-top: 20px
+	&_btn
+		margin-top: 20px
+		font-family: $opensans
+		padding: 8px 45px
+.s-about-menu
+	padding: 40px 20px
+	/* ABOUT PAGE END*/
+	/* INFRASTRUCTURE PAGE */
+.main-infrastructure
+	padding: 100px 0 40px 0
+	.h1
+		text-transform: none
+		margin: 0
+	&_hr
+		margin: 10px auto 20px
+	&_box
+		width: 100%
+		padding-top: 20px
+	&_link
+		display: block
+		font-size: 55px
+		color: $link
+		font-weight: 300
+		text-align: center
+		line-height: 70px
+		border: 1px solid rgba(#fff, .3)
+		border-radius: 50%
+		width: 70px
+		height: 70px
+		margin: 0 auto
+		cursor: pointer
+		&:hover
+			color: $link
+	/* SWIPER SLIDER */
+.swiper-container 
+	width: 100%
+	height: 100px
+
+	/* INFRASTRUCTURE PAGE END*/
+/* BUYERS */
+.buyers-wrap
+	justify-content: center
+	list-style: none
+	@extend .s-menu-wrap
+	padding: 100px 0 40px
+.buyers-box
+	@extend .s-menu-box
+	p
+		font-size: 14px
+		line-height: 1.4
+		margin-top: 10px
+.buyers-link
+	@extend .s-menu-link
+	background-color: rgba(#fff, .1)
+
+	.fa 
+		color: #429ccf
+		font-size: 36px
+		&:hover
+			color: #fff
+.s-buyers-content
+	padding: 40px 20px 60px 20px
+	background-color: #fff
+	color: #333
+.buyers-content-wrap
+	.h2
+		font-size: 30px
+		font-weight: 600
+	&_hr
+		border-bottom: 5px solid $grn
+	p
+		margin-top: 20px
+		font-size: 14px
+		text-align: center
+		font-weight: 500
+.s-buyers-detail
+	padding: 40px 20px 10% 20px
+	/* BUYERS END */
+	/* CONTACTS */
+.contacts
+	padding: 35px	0
+	&-map
+		padding: 0
+	&-detail
+		margin-top: -10px
+		padding-top: 50px
+	&-header
+		padding-bottom: 0
+.contacts-box
+	text-align: center
+	padding-bottom: 35px	
+	&_item
+		padding-bottom: 20px
+		p
+			margin-bottom: 10px
+		p:nth-child(2)
+			font-size: 14px
+			font-family: $opensans
+		p:nth-child(3)
+			margin: 0
+	span
+		display: inline-block
+		width: 70px
+		height: 70px
+		border: 1px solid rgba(#fff, .4)
+		border-radius: 50%
+		padding: 16px
+	img
+		margin: 0 auto
+	&_img
+		margin-bottom: 15px
+		&__phone-icon
+			padding: 15px 22px !important
+	/* CONTACTS END */
 
 
+
+
+.js-tabs__content.active 
+	display: block
+.js-tabs__content 
+	display: none
 
 @import "media" // Always at the end
