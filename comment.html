@@ -1,0 +1,235 @@
+<!-- COMMENT PAGE -->
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+	<!-- <base href="/"> -->
+
+	<title>За ручьем - мобильная версия</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	<!-- Template Basic Images Start -->
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="icon" href="img/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+	<!-- Template Basic Images End -->
+	
+	<!-- Custom Browsers Color Start -->
+	<meta name="theme-color" content="#000">
+	<!-- Custom Browsers Color End -->
+
+	<link rel="stylesheet" href="css/main.min.css">
+
+</head>
+
+<body>
+	<!-------------------- HEADER ----------------------->
+<header class="header comment-header" style="background-image: url(img/bg-comment.jpg);">
+	<div class="header-topwaves">
+		<img src="img/main/top-waves.png" alt="">
+	</div>
+	<div class="header-logo">
+		<img class="img-responsive" src="img/logo.png" alt="">
+	</div>
+	<!-- BUTTON "MENU" -->
+	<nav>
+	<div class="header-menu">
+		<div class="header-menu_text">Меню</div>
+		<div class="header-menu_line"></div>
+		<div class="header-menu_line"></div>
+		<div class="header-menu_line"></div>
+		<div class="header-menu_line"></div>
+	</div>
+	<!-- BUTTON "CALLBACK" -->
+	
+	<!-- MENU -->
+		<div class="menu">
+		<div class="menu-overlay">
+			<div class="menu-close"></div>
+				<div class="header-topwaves">
+		<img src="img/main/top-waves.png" alt="">
+	</div>
+			<div class="menu-nav">
+				<ul class="menu-list">
+					<li class="menu_item">
+						<a class="menu_item__link" href="#">о проекте</a>
+					</li>
+					<li class="menu_item">
+						<a class="menu_item__link" href="#">выбрать квартиру</a>
+					</li>
+					<li class="menu_item">
+						<a class="menu_item__link" href="#">инфраструктура</a>
+					</li>
+					<li class="menu_item">
+						<a class="menu_item__link" href="#">полезные статьи</a>
+					</li>
+					<li class="menu_item">
+						<a class="menu_item__link" href="#">контакты</a>
+					</li>
+					<li class="menu_item">
+						<a class="menu_item__link" href="#">отзывы</a>
+					</li>
+				</ul>
+			</div>
+			<div class="waves-section">
+		<img class="img-responsive waves-section_img" src="img/main/section-bg.png" alt="">
+	</div>
+<div class="circle"></div>
+		</div>
+	</div>
+</nav>
+	<div class="main comment">
+		<h1 class="h1 comment-h1">о нас<br>говорят...</h1>
+		<div class="hr comment-hr"></div>
+		<a href="#callback-popup" class="button comment_btn show-popup-comment" data-effect="mfp-zoom-in">написать отзыв</a href="">
+	</div>
+	<div class="comment-wrapper">
+		<div class="comment-box">
+			<h4 class="h4 comment-box_h4">АСАНОВА СВЕТЛАНА</h4>
+			<span class="comment-box_date">29 февраля 2018г., 17:56</span>
+			<p>Купили квартиру себе, потом родителям. С каждым разом мне все больше нравятся расположения предложенных на выбор</p>
+			<a href="#comment-1" class="button comment-box_btn show-popup-comment" data-effect="mfp-zoom-in">подробнее</a href="">
+		</div>
+		<div class="comment-box">
+			<h4 class="h4 comment-box_h4">АСАНОВА СВЕТЛАНА</h4>
+			<span class="comment-box_date">29 февраля 2018г., 17:56</span>
+			<p>Купили квартиру себе, потом родителям. С каждым разом мне все больше нравятся расположения предложенных на выбор</p>
+			<a href="#comment-2" class="button comment-box_btn show-popup-comment" data-effect="mfp-zoom-in">подробнее</a href="">
+		</div>
+		<div class="comment-box">
+			<h4 class="h4 comment-box_h4">АСАНОВА СВЕТЛАНА</h4>
+			<span class="comment-box_date">29 февраля 2018г., 17:56</span>
+			<p>Купили квартиру себе, потом родителям. С каждым разом мне все больше нравятся расположения предложенных на выбор</p>
+			<a href="#comment-3" class="button comment-box_btn show-popup-comment" data-effect="mfp-zoom-in">подробнее</a href="">
+		</div>
+		<div class="comment-box">
+			<h4 class="h4 comment-box_h4">АСАНОВА СВЕТЛАНА</h4>
+			<span class="comment-box_date">29 февраля 2018г., 17:56</span>
+			<p>Купили квартиру себе, потом родителям. С каждым разом мне все больше нравятся расположения предложенных на выбор</p>
+			<a href="#comment-4" class="button comment-box_btn show-popup-comment" data-effect="mfp-zoom-in">подробнее</a href="">
+		</div>
+	</div>
+	<div class="waves-section">
+		<img class="img-responsive waves-section_img" src="img/main/section-bg.png" alt="">
+</div>
+<div class="circle"></div>
+</header>
+
+
+<!------------------- DETAIL "FORM" ----------------->
+<section class="s-detail">
+	<div class="detail">
+		<h4 class="h4">УЗНАЙТЕ ПОДРОБНОСТИ<br> У МЕНЕДЖЕРА ПРЯМО СЕЙЧАС</h4>
+			<div class="detail-boximg">
+				<img src="img/form-manadger.png" alt="">
+			</div>
+		<form  class="form-detail" action="mail/mail.php" method="POST">
+			<input class="form-detail__input" type="text" name="Имя" placeholder="Ваше имя" minlength="2" required="required">
+			<input class="form-detail__input" id="phone" type="tel" name="Телефон" placeholder="Ваше телефон" required="required">	
+			<p><input class="form-detail__checkbox" type="checkbox" checked required="required">Даю согласие на <a class="form-personal"  href="upload/privacy.pdf" target="_blank">обработку персональных данных</a></p>
+			<button class="form-detail__button button button-green" type="submit">узнать у менеджера</button>
+		</form>
+	</div>
+</section>
+<!--------------- S-MENU ------------------->
+<section class="s-menu" style="background-image: url(img/bg-s-menu.jpg)">
+	<div class="s-menu-wrap">
+		<div class="s-menu-box">
+			<a href="#" class="s-menu-link">
+				<img src="img/s-menu/star.png" alt="акции">
+			</a>
+			<p>акции</p>
+		</div>
+		<div class="s-menu-box">
+			<a href="#" class="s-menu-link">
+				<img src="img/s-menu/panorama.png" alt="панорама">
+			</a>
+			<p>панорама</p>
+		</div>
+		<div class="s-menu-box">
+			<a href="#" class="s-menu-link">
+				<img src="img/s-menu/video.png" alt="видео">
+				</a>
+			<p>видео</p>
+		</div>
+		<div class="s-menu-box">
+			<a href="#" class="s-menu-link">
+				<img src="img/s-menu/bank.png" alt="ипотека">
+			</a>
+			<p>ипотека</p>
+		</div>
+	</div>
+</section>
+<!------------- FOOTER ---------------->
+<footer class="s-footer">
+	<div class="footer">
+	<p><a class="footer-right-link" href="#">ПРАВОВАЯ ИНФОРМАЦИЯ</a></p>
+	<p><a class="footer-right-link" href="#">Проектная декларация</a></p>
+	<p class="footer-phone"><i class="fa fa-phone"></i>+7 (3462) <span class="s-bold">38-53-73</span></p>
+	<p class="footer-direction"><i class="fa fa-map-marker"></i> г. Сургут, ул. Университетская, 19 </p>
+	<div class="footer-social">
+		<a class="footer-social__link" href="#"><i class="fa fa-vk" aria-hidden="true"></i></a>
+		<a class="footer-social__link" href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+		<a class="footer-social__link" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+		<a class="footer-social__link" href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+	</div>
+	</div>
+</footer>
+<!------------- COPYRIGHT ---------------->
+<section class="copyright">
+	<div class="copyright-sells">
+		<ul>
+			<li><span>Разработка и реклама<br>
+				<a class="copyright-link" target="_blank" href="https://sells.company/">компания Sells</a></span></li>
+		</ul>
+	</div>
+</section>
+<!-- POPUP COMMENT-1 -->
+<div id="comment-1" class="comment-popup mfp-with-anim mfp-hide">
+	<h2 class="h2 comment-popup_h2">Асанова Светлана</h2>
+	<span class="comment-popup_date">29 февраля 2018г., 17:56</span>
+	<p>Здравствуйте! Хочу поделиться своим скромным мнением об этом ЖК. Семьей пока не обзавелся, поэтому выбирал для себя, выбирал долго и выбрал именно здесь. Хоть моя квартира еще не готова, но это как говорится дело времени. Глядя на уже готовый дом не пожалел что купил. Сделано все аккуратно, много насаждений, добротно оформлены подъезды... Я получил только положительные эмоции когда прошелся по готовой территории. Собственно от чего и захотел об этом написать. Понятное дело есть и круче, в элитарных ЖК, но цена там тоже так сказать элитарная)) А тут и ценник ок, и сделано ок)</p>
+</div>
+<!-- POPUP COMMENT-2 -->
+<div id="comment-2" class="comment-popup mfp-with-anim mfp-hide">
+	<h2 class="h2 comment-popup_h2">Асанова Светлана2</h2>
+	<span class="comment-popup_date">29 февраля 2018г., 17:56</span>
+	<p>Здравствуйте! Хочу поделиться своим скромным мнением об этом ЖК. Семьей пока не обзавелся, поэтому выбирал для себя, выбирал долго и выбрал именно здесь. Хоть моя квартира еще не готова, но это как говорится дело времени. Глядя на уже готовый дом не пожалел что купил. Сделано все аккуратно, много насаждений, добротно оформлены подъезды... Я получил только положительные эмоции когда прошелся по готовой территории. Собственно от чего и захотел об этом написать. Понятное дело есть и круче, в элитарных ЖК, но цена там тоже так сказать элитарная)) А тут и ценник ок, и сделано ок)</p>
+</div>
+<!-- POPUP COMMENT-3 -->
+<div id="comment-3" class="comment-popup mfp-with-anim mfp-hide">
+	<h2 class="h2 comment-popup_h2">Асанова Светлана3</h2>
+	<span class="comment-popup_date">29 февраля 2018г., 17:56</span>
+	<p>Здравствуйте! Хочу поделиться своим скромным мнением об этом ЖК. Семьей пока не обзавелся, поэтому выбирал для себя, выбирал долго и выбрал именно здесь. Хоть моя квартира еще не готова, но это как говорится дело времени. Глядя на уже готовый дом не пожалел что купил. Сделано все аккуратно, много насаждений, добротно оформлены подъезды... Я получил только положительные эмоции когда прошелся по готовой территории. Собственно от чего и захотел об этом написать. Понятное дело есть и круче, в элитарных ЖК, но цена там тоже так сказать элитарная)) А тут и ценник ок, и сделано ок)</p>
+</div>
+<!-- POPUP COMMENT-4 -->
+<div id="comment-4" class="comment-popup mfp-with-anim mfp-hide">
+	<h2 class="h2 comment-popup_h2">Асанова Светлана4</h2>
+	<span class="comment-popup_date">29 февраля 2018г., 17:56</span>
+	<p>Здравствуйте! Хочу поделиться своим скромным мнением об этом ЖК. Семьей пока не обзавелся, поэтому выбирал для себя, выбирал долго и выбрал именно здесь. Хоть моя квартира еще не готова, но это как говорится дело времени. Глядя на уже готовый дом не пожалел что купил. Сделано все аккуратно, много насаждений, добротно оформлены подъезды... Я получил только положительные эмоции когда прошелся по готовой территории. Собственно от чего и захотел об этом написать. Понятное дело есть и круче, в элитарных ЖК, но цена там тоже так сказать элитарная)) А тут и ценник ок, и сделано ок)</p>
+</div>
+<!-- POPUP "CALLBACK" -->
+<div id="callback-popup" class="form-popup mfp-with-anim mfp-hide">
+	<form class="form-callback" action="#" method="POST">
+		<h4 class="h4 form-callback_h4"><strong>Заказать звонок</strong></h4>
+		<span><div class="hr form-callback_hr"></div></span>
+		<input class="form-callback-input" type="text" name="name" placeholder="Ваше имя" required="required">
+		<input class="form-callback-input" type="tel" name="Телефон" placeholder="Телефон"required="required">
+		<p><input class="form-callback-checkbox" type="checkbox" checked required="required">Даю согласие на <a class="form-personal" href="upload/privacy.pdf">обработку персональных данных</a></p>
+		<button class="form-callback_button button">заказать звонок</button>
+	</form>
+	<div class="form-popup_address">
+		<p class="form-popup_address__phone"><i class="fa fa-phone"></i>+7 (3462) <span class="s-bold">38-53-73</span></p>
+		<p class="form-popup_address__home"><i class="fa fa-map-marker"></i> г. Сургут, ул. Университетская, 19 </p>
+	</div>
+</div>
+
+<script src="js/scripts.min.js"></script>
+
+</body>
+</html>

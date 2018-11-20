@@ -39,22 +39,24 @@
 	</div>
 	<!-- Кнопка меню -->
 	<nav>
-	<div class="header-menu">
-		<div class="header-menu_text">Меню</div>
-		<div class="header-menu_line"></div>
-		<div class="header-menu_line"></div>
-		<div class="header-menu_line"></div>
-		<div class="header-menu_line"></div>
+		<div class="header-menu">
+			<div class="header-menu_text">Меню</div>
+			<div class="header-menu_line"></div>
+			<div class="header-menu_line"></div>
+			<div class="header-menu_line"></div>
+			<div class="header-menu_line"></div>
 	</div>
-
 	<!-- Меню -->
 	<div class="menu">
 		<div class="menu-overlay">
 			<div class="menu-close"></div>
+				<div class="header-topwaves">
+		<img src="img/main/top-waves.png" alt="">
+	</div>
 			<div class="menu-nav">
 				<ul class="menu-list">
 					<li class="menu_item">
-						<a class="menu_item__link" href="#">о проекте</a>
+						<a class="menu_item__link" href="">о проекте</a>
 					</li>
 					<li class="menu_item">
 						<a class="menu_item__link" href="#">выбрать квартиру</a>
@@ -73,15 +75,19 @@
 					</li>
 				</ul>
 			</div>
+			<div class="waves-section">
+		<img class="img-responsive waves-section_img" src="img/main/section-bg.png" alt="">
+	</div>
+<div class="circle"></div>
 		</div>
 	</div>
-</nav>
+	</nav>
 	<div class="main main-infrastructure">
 			<h1 class="h1">Новая школа</h1>
 		<div class="hr main-infrastructure_hr"></div>
 			<p>С углубленным изучением  английского языка</p>
 		<div class="main-infrastructure_box">
-			<a href="#" class="main-infrastructure_link">&plus;</a href="#">
+			<a href="#top-popup" class="main-infrastructure_link show-popup" data-effect="mfp-zoom-in">&plus;</a>
 		</div>
 	</div>
 	<div class="waves-section">
@@ -99,7 +105,7 @@
 		<div class="hr main-infrastructure_hr"></div>
 			<p>С углубленным изучением  английского языка</p>
 		<div class="main-infrastructure_box">
-			<a href="#" class="main-infrastructure_link">&plus;</a href="#">
+			<a href="#middle-popup" class="main-infrastructure_link show-popup" data-effect="mfp-zoom-in">&plus;</a href="#">
 		</div>
 	</div>
 		<div class="waves-section">
@@ -115,7 +121,7 @@
 		<div class="hr main-infrastructure_hr"></div>
 			<p>С углубленным изучением  английского языка</p>
 		<div class="main-infrastructure_box">
-			<a href="#" class="main-infrastructure_link">&plus;</a href="#">
+			<a href="#bottom-popup" class="main-infrastructure_link show-popup" data-effect="mfp-zoom-in">&plus;</a href="#">
 		</div>
 	</div>
 	<div class="waves-section">
@@ -191,6 +197,24 @@
 		</ul>
 	</div>
 </section>
+<!-- POPUP -->
+<div id="top-popup" class="owl-carousel infrastructure-popup mfp-with-anim mfp-hide">
+  <div><img class="img-width" src="img/infrastructure/bg-top.jpg" alt=""></div>
+  <div><img class="img-width" src="img/infrastructure/bg-middle.jpg" alt=""></div>
+  <div><img class="img-width" src="img/infrastructure/bg-bottom.jpg" alt=""></div>
+</div>
+<div id="middle-popup" class="owl-carousel infrastructure-popup mfp-with-anim mfp-hide">
+	<div><img class="img-width" src="img/infrastructure/bg-middle.jpg" alt=""></div>
+  <div><img class="img-width" src="img/infrastructure/bg-top.jpg" alt=""></div>
+  <div><img class="img-width" src="img/infrastructure/bg-bottom.jpg" alt=""></div>
+</div>
+<div id="bottom-popup" class="owl-carousel infrastructure-popup mfp-with-anim mfp-hide">
+	<div><img class="img-width" src="img/infrastructure/bg-bottom.jpg" alt=""></div>
+  <div><img class="img-width" src="img/infrastructure/bg-top.jpg" alt=""></div>
+  <div><img class="img-width" src="img/infrastructure/bg-middle.jpg" alt=""></div>
+</div>
+
+<!-- POPUP END-->
 <script src="js/scripts.min.js"></script>
 
 </body>
